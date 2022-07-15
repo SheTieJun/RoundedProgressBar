@@ -11,6 +11,7 @@ import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import com.mackhartley.roundedprogressbar.CornerRadius
 import com.mackhartley.roundedprogressbar.ProgressTextFormatter
 import com.mackhartley.roundedprogressbar.RoundedProgressBar
+import com.mackhartley.roundedprogressbar.RoundedShadeProgressBar
 import it.sephiroth.android.library.numberpicker.doOnProgressChanged
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.math.roundToInt
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener {
             advanced_bar_5,
             advanced_bar_6,
             advanced_bar_7
+
         )
         setProgressBarAttributesProgrammatically(simple_bar_1)
         setUpCustomProgressTextExample(advanced_bar_7)
@@ -225,17 +227,26 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener {
 
     private fun increaseProgress() {
         allProgressBars.forEach { changeProgress(it) }
+        changeProgress(advanced_bar_8)
         changeProgressAdvBar2()
         changeProgressAdvBar3()
     }
 
     private fun decreaseProgress() {
         allProgressBars.forEach { changeProgress(it, false) }
+        changeProgress(advanced_bar_8,false)
         changeProgressAdvBar2(false)
         changeProgressAdvBar3(false)
     }
 
     private fun changeProgress(roundedProgressBar: RoundedProgressBar, isAddition: Boolean = true) {
+        val curValue = roundedProgressBar.getProgressPercentage()
+        var adjustment = viewModel.getCurAmount()
+        if (!isAddition) adjustment *= -1
+        roundedProgressBar.setProgressPercentage(curValue + adjustment)
+    }
+
+    private fun changeProgress(roundedProgressBar: RoundedShadeProgressBar, isAddition: Boolean = true) {
         val curValue = roundedProgressBar.getProgressPercentage()
         var adjustment = viewModel.getCurAmount()
         if (!isAddition) adjustment *= -1

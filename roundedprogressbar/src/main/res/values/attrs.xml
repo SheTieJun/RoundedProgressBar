@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <attr name="rpbProgress" format="integer" />
+
+    <attr name="rpbProgressDrawable" format="reference" />
+    <attr name="rpbBackgroundDrawable" format="reference" />
+    <attr name="rpbProgressTextColor" format="reference|color" />
+    <attr name="rpbBackgroundTextColor" format="reference|color" />
+
+    <attr name="rpbCornerRadius" format="dimension" />
+    <attr name="rpbCornerRadiusTopLeft" format="dimension" />
+    <attr name="rpbCornerRadiusTopRight" format="dimension" />
+    <attr name="rpbCornerRadiusBottomRight" format="dimension" />
+    <attr name="rpbCornerRadiusBottomLeft" format="dimension" />
+
+    <attr name="rpbTextSize" format="dimension" />
+    <attr name="rpbTextPadding" format="dimension" />
+    <attr name="rpbCustomFontPath" format="string" />
+    <attr name="rpbAnimationLength" format="integer" />
+
+    <attr name="rpbShowProgressText" format="boolean" />
+    <attr name="rpbIsRadiusRestricted" format="boolean" />
+
+    <attr name="rpbProgressColor" format="reference|color" />
+    <attr name="rpbBackgroundColor" format="reference|color" />
+
     <declare-styleable name="RoundedProgressBar">
-        <attr name="rpbProgress" format="integer" />
+        <attr name="rpbProgress" />
 
-        <attr name="rpbProgressColor" format="reference|color" />
-        <attr name="rpbBackgroundColor" format="reference|color" />
-        <attr name="rpbProgressTextColor" format="reference|color" />
-        <attr name="rpbBackgroundTextColor" format="reference|color" />
+        <attr name="rpbProgressColor" />
+        <attr name="rpbBackgroundColor" />
+        <attr name="rpbProgressTextColor" />
+        <attr name="rpbBackgroundTextColor" />
 
-        <attr name="rpbCornerRadius" format="dimension" />
-        <attr name="rpbCornerRadiusTopLeft" format="dimension" />
-        <attr name="rpbCornerRadiusTopRight" format="dimension" />
-        <attr name="rpbCornerRadiusBottomRight" format="dimension" />
-        <attr name="rpbCornerRadiusBottomLeft" format="dimension" />
+        <attr name="rpbCornerRadius" />
+        <attr name="rpbCornerRadiusTopLeft" />
+        <attr name="rpbCornerRadiusTopRight" />
+        <attr name="rpbCornerRadiusBottomRight" />
+        <attr name="rpbCornerRadiusBottomLeft" />
 
-        <attr name="rpbTextSize" format="dimension" />
-        <attr name="rpbTextPadding" format="dimension" />
-        <attr name="rpbCustomFontPath" format="string" />
-        <attr name="rpbAnimationLength" format="integer" />
+        <attr name="rpbTextSize" />
+        <attr name="rpbTextPadding" />
+        <attr name="rpbCustomFontPath" />
+        <attr name="rpbAnimationLength" />
 
-        <attr name="rpbShowProgressText" format="boolean" />
-        <attr name="rpbIsRadiusRestricted" format="boolean" />
+        <attr name="rpbShowProgressText" />
+        <attr name="rpbIsRadiusRestricted" />
     </declare-styleable>
+
+
+    <declare-styleable name="RoundedShadeProgressBar">
+
+        <attr name="rpbProgress" />
+        <attr name="rpbProgressDrawable" />
+        <attr name="rpbProgressTextColor" />
+        <attr name="rpbBackgroundTextColor" />
+        <attr name="rpbCornerRadius" />
+        <attr name="rpbCornerRadiusTopLeft" />
+        <attr name="rpbCornerRadiusTopRight" />
+        <attr name="rpbCornerRadiusBottomRight" />
+        <attr name="rpbCornerRadiusBottomLeft" />
+
+        <attr name="rpbTextSize" />
+        <attr name="rpbTextPadding" />
+        <attr name="rpbCustomFontPath" />
+        <attr name="rpbAnimationLength" />
+
+        <attr name="rpbShowProgressText" />
+        <attr name="rpbIsRadiusRestricted" />
+    </declare-styleable>
+
 </resources>
